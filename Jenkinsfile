@@ -16,9 +16,15 @@ pipeline {
                     npm --version
                     npm ci
                     npm run build
-                    ls -la
+                    ls -
                 '''
             }
+        }
+    }
+
+    stage('Test') {
+        steps {
+            echo 'Test stage'
         }
     }
 }
